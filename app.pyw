@@ -34,7 +34,7 @@ def open_file():
         return
     file_path = filedialog.askopenfilename(filetypes=[("Text files", "*.txt")])
     if file_path:
-        with open(file_path, "r") as file:
+        with open(file_path, "r",encoding='utf-8') as file:
             chap = chapList.index(int(file.name.split("/")[-1].replace(".txt", "")))
             content = file.read()
             title = str(content.split('\n')[0])
@@ -58,7 +58,7 @@ def next():
     file_path = path + str(chapList[chap]) + ".txt"
     try:
         if file_path:
-            with open(file_path, "r") as file:
+            with open(file_path, "r",encoding='utf-8') as file:
                 content = file.read()
                 title = str(content.split('\n')[0])
                 var.set(title)
@@ -79,7 +79,7 @@ def pre():
     if len(chapList) == chap:
         return
     if file_path:
-        with open(file_path, "r") as file:
+        with open(file_path, "r",encoding='utf-8') as file:
             content = file.read()
             title = str(content.split('\n')[0])
             var.set(title)
@@ -95,7 +95,7 @@ def load():
         return
     file_path = path + str(chapList[chap]) + ".txt"
     if file_path:
-        with open(file_path, "r") as file:
+        with open(file_path, "r",encoding='utf-8') as file:
             content = file.read()
             title = str(content.split('\n')[0])
             var.set(title)
