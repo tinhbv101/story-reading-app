@@ -203,17 +203,3 @@ root.attributes('-topmost', 'true')
 # x.start()
 # Start the tkinter main loop
 root.mainloop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
